@@ -189,15 +189,54 @@
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Spotify</a>
       <a class="btn btn-outline" href="#" target="_blank" rel="noopener">TuneIn</a>
     </div>
-    <p class="disclosure">
-      The text of this book was developed with the assistance of AI tools and has
-      been substantially edited, revised, and finalized by the author. The
-      illustrations were generated using AI image-generation tools. Narration
-      produced with AI voices.
-    </p>
     <p class="copyright">© 2026 Arge Barn. All rights reserved.</p>
   </div>
 </footer>
+<!-- Voice line: plays once on the visitor's first interaction, then never again -->
 
+<audio id="voice-line" src="assets/audio/voice-line.mp3" preload="auto"></audio>
+
+
+<script>
+
+  (function () {
+
+    var played = false;
+
+    var voiceLine = document.getElementById('voice-line');
+
+
+    function playOnce() {
+
+      if (played) return;
+
+      played = true;
+
+      voiceLine.play().catch(function () {
+
+        // Autoplay was blocked — safe to ignore, it'll just wait for the next interaction
+
+        played = false;
+
+      });
+
+      document.removeEventListener('click', playOnce);
+
+      document.removeEventListener('scroll', playOnce);
+
+      document.removeEventListener('touchstart', playOnce);
+
+    }
+
+
+    document.addEventListener('click', playOnce);
+
+    document.addEventListener('scroll', playOnce);
+
+    document.addEventListener('touchstart', playOnce);
+
+  })();
+
+</script>
 </body>
 </html>
