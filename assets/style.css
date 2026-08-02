@@ -108,15 +108,6 @@ h1, h2, h3 {
   padding: 40px 24px;
 }
 
-.site-logo {
-  display: block;
-  margin: 0 auto;
-  width: 40%;
-opacity: 45%;
-  max-width: 420px;
-  height: auto;
-}
-
 .torn-banner {
   display: inline-block;
   padding: 18px 44px 10px;
@@ -345,6 +336,58 @@ section {
   border-left: 2px solid var(--spam-red);
   padding-left: 10px;
   font-style: normal;
+}
+
+.like-btn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid rgba(237,226,206,0.3);
+  color: var(--cream-dim);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.like-btn:hover:not(.liked) {
+  border-color: var(--spam-red);
+  color: var(--cream);
+}
+
+.like-btn.liked {
+  border-color: var(--spam-red);
+  color: var(--yolk-gold);
+  background: rgba(200,29,58,0.08);
+  cursor: default;
+}
+
+#bonus-wrap {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px dashed rgba(237,226,206,0.2);
+}
+
+.bonus-lock {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.bonus-progress {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--cream-dim);
+  letter-spacing: 0.02em;
+  margin-top: 10px;
+}
+
+.bonus-grid .dossier {
+  border-top-color: var(--yolk-gold);
 }
 
 /* ---------------- LISTEN ---------------- */
