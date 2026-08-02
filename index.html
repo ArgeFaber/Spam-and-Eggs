@@ -259,6 +259,21 @@
   </div>
 </footer>
 
+<!-- Voice line: click to hear Spam -->
+<button id="voice-trigger" aria-label="Play a voice line from Spam">🔊 Hear Spam</button>
+<audio id="voice-line" src="assets/audio/voice-line.mp3" preload="auto"></audio>
+
+<script>
+  (function () {
+    var btn = document.getElementById('voice-trigger');
+    var voiceLine = document.getElementById('voice-line');
+    btn.addEventListener('click', function () {
+      voiceLine.currentTime = 0;
+      voiceLine.play();
+    });
+  })();
+</script>
+
 <!-- "Want more?" reveal -->
 <script>
   (function () {
