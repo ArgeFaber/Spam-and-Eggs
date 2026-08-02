@@ -19,7 +19,7 @@
   </video>
   <div class="hero-content">
     <div class="torn-banner">
-      <h1>Spam<br>and Eggs</h1>
+      <h1>Spam<br>&amp; Eggs</h1>
     </div>
     <p class="hero-sub">A Very Serious Morning</p>
     <p class="hero-tagline">Five breakfast items. One very serious morning. Nobody makes it to lunch.</p>
@@ -81,7 +81,6 @@
           <div class="dossier-status">Status: Incognito</div>
           <p class="dossier-bio">Fostered in the Scottish Highlands by two well-meaning bottles of ketchup. Officially, nobody knows what he did before the tin.</p>
           <p class="dossier-quote">"A less salty mission, today."</p>
-          <button class="like-btn" data-char="spam">🤍 Like Agent Spam</button>
         </div>
       </div>
 
@@ -92,7 +91,6 @@
           <div class="dossier-status">Status: Active, technically</div>
           <p class="dossier-bio">Deeply confident. Insists he's free range. Has never once, to anyone's knowledge, left Yorkshire.</p>
           <p class="dossier-quote">"Eggs does not stress, mon ami."</p>
-          <button class="like-btn" data-char="eggs">🤍 Like Private Eggs</button>
         </div>
       </div>
 
@@ -103,7 +101,6 @@
           <div class="dossier-status">Status: Dead centre, always</div>
           <p class="dossier-bio">Thick and heavy — not at all like his cousin A1, a distant, should-be-forgotten diner regular.</p>
           <p class="dossier-quote">"That's my prerogative."</p>
-          <button class="like-btn" data-char="brownsauce">🤍 Like Dr. Brown Sauce</button>
         </div>
       </div>
 
@@ -116,7 +113,6 @@
           <div class="dossier-status">Status: Local heavy</div>
           <p class="dossier-bio">Nobody has ever seen him arrive. He simply pre-exists each morning, same as taxes.</p>
           <p class="dossier-quote">"Oi oi, saveloy!"</p>
-          <button class="like-btn" data-char="toast">🤍 Like Toast</button>
         </div>
       </div>
 
@@ -129,54 +125,67 @@
           <div class="dossier-status">Status: Overlooked</div>
           <p class="dossier-bio">Constantly left at the supermarket. Never once, in this kitchen or any kitchen, asked her opinion.</p>
           <p class="dossier-quote">"I'll show them."</p>
-          <button class="like-btn" data-char="butter">🤍 Like Miss Butter</button>
         </div>
       </div>
 
     </div>
 
-    <!-- ============ BONUS FILES (unlockable) ============ -->
+    <!-- ============ WANT MORE? (single interest vote) ============ -->
     <div id="bonus-wrap">
       <div class="bonus-lock" id="bonus-lock">
-        <p class="eyebrow">🔒 Classified</p>
-        <p class="bonus-progress" id="bonus-progress">Like all 5 characters above to unlock the Bonus Files.</p>
+        <p class="eyebrow">Fancy a Second Helping?</p>
+        <p class="bonus-progress">There's more where that came from — characters mentioned but never shown, and maybe a whole second book. Tell us you want it.</p>
+        <button class="btn btn-primary" id="want-more-btn">🤍 Yes, I Want More</button>
       </div>
 
-      <div class="cast-grid bonus-grid" id="bonus-grid" hidden>
-        <div class="dossier">
-          <div class="dossier-photo">
-            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+      <div class="bonus-revealed" id="bonus-revealed" hidden>
+        <p class="eyebrow" style="text-align:center;">Declassified</p>
+        <div class="cast-grid bonus-grid">
+          <div class="dossier">
+            <div class="dossier-photo">
+              <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+            </div>
+            <div class="dossier-body">
+              <div class="dossier-name">A1</div>
+              <div class="dossier-status">Status: Distant, should-be-forgotten</div>
+              <p class="dossier-bio">Brown Sauce's cousin. Last heard doing steak-night specials at some roadside diner outside Nevada. Selling himself cheap.</p>
+              <p class="dossier-quote">"Another day, another dollar-less."</p>
+            </div>
           </div>
-          <div class="dossier-body">
-            <div class="dossier-name">A1</div>
-            <div class="dossier-status">Status: Distant, should-be-forgotten</div>
-            <p class="dossier-bio">Brown Sauce's cousin. Last heard doing steak-night specials at some roadside diner outside Nevada. Selling himself cheap.</p>
-            <p class="dossier-quote">"Another day, another dollar-less."</p>
+
+          <div class="dossier">
+            <div class="dossier-photo">
+              <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+            </div>
+            <div class="dossier-body">
+              <div class="dossier-name">The Tomato Brothers</div>
+              <div class="dossier-status">Status: Unspecified, plural</div>
+              <p class="dossier-bio">Referenced once, feared thereafter. Whatever they did to Brown Sauce, he's still not over it.</p>
+              <p class="dossier-quote">"Do I look British?"</p>
+            </div>
+          </div>
+
+          <div class="dossier">
+            <div class="dossier-photo">
+              <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+            </div>
+            <div class="dossier-body">
+              <div class="dossier-name">Margarine</div>
+              <div class="dossier-status">Status: Nemesis</div>
+              <p class="dossier-bio">Butter's rival, forever trying to bring her down. Not pure. Not welcome.</p>
+              <p class="dossier-quote">"Constantly left at the supermarket, and rightly so."</p>
+            </div>
           </div>
         </div>
 
-        <div class="dossier">
-          <div class="dossier-photo">
-            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
-          </div>
-          <div class="dossier-body">
-            <div class="dossier-name">The Tomato Brothers</div>
-            <div class="dossier-status">Status: Unspecified, plural</div>
-            <p class="dossier-bio">Referenced once, feared thereafter. Whatever they did to Brown Sauce, he's still not over it.</p>
-            <p class="dossier-quote">"Do I look British?"</p>
-          </div>
-        </div>
-
-        <div class="dossier">
-          <div class="dossier-photo">
-            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
-          </div>
-          <div class="dossier-body">
-            <div class="dossier-name">Margarine</div>
-            <div class="dossier-status">Status: Nemesis</div>
-            <p class="dossier-bio">Butter's rival, forever trying to bring her down. Not pure. Not welcome.</p>
-            <p class="dossier-quote">"Constantly left at the supermarket, and rightly so."</p>
-          </div>
+        <div class="next-book-tease">
+          <p class="eyebrow">In Development</p>
+          <h3>Book Two</h3>
+          <p>Same kitchen, same dark logic, a different shift on the counter. Nothing's confirmed. Nothing's off the table.</p>
+          <p class="submit-line">
+            Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge —
+            <a href="mailto:YOUR_EMAIL_HERE@example.com?subject=Character%20submission%20for%20Spam%20and%20Eggs%20Book%20Two&body=My%20character%20idea%3A%0A%0A">send it in</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -250,59 +259,27 @@
   </div>
 </footer>
 
-<!-- Bonus Files unlock logic -->
+<!-- "Want more?" reveal -->
 <script>
   (function () {
-    var ALL_CHARS = ['spam', 'eggs', 'brownsauce', 'toast', 'butter'];
-    var STORAGE_KEY = 'spamAndEggsLikes';
+    var STORAGE_KEY = 'spamAndEggsWantsMore';
+    var btn = document.getElementById('want-more-btn');
+    var lock = document.getElementById('bonus-lock');
+    var revealed = document.getElementById('bonus-revealed');
 
-    function getLiked() {
-      try {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-      } catch (e) { return []; }
+    function reveal() {
+      lock.hidden = true;
+      revealed.hidden = false;
     }
 
-    function saveLiked(arr) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    if (localStorage.getItem(STORAGE_KEY) === 'yes') {
+      reveal();
     }
 
-    function updateUI() {
-      var liked = getLiked();
-
-      document.querySelectorAll('.like-btn').forEach(function (btn) {
-        var c = btn.getAttribute('data-char');
-        if (liked.indexOf(c) !== -1) {
-          btn.textContent = btn.textContent.replace('🤍', '❤️');
-          btn.classList.add('liked');
-          btn.disabled = true;
-        }
-      });
-
-      var progress = document.getElementById('bonus-progress');
-      var lock = document.getElementById('bonus-lock');
-      var grid = document.getElementById('bonus-grid');
-
-      if (liked.length >= ALL_CHARS.length) {
-        lock.hidden = true;
-        grid.hidden = false;
-      } else {
-        progress.textContent = 'Liked ' + liked.length + ' of ' + ALL_CHARS.length + ' — like everyone above to unlock the Bonus Files.';
-      }
-    }
-
-    document.querySelectorAll('.like-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var c = btn.getAttribute('data-char');
-        var liked = getLiked();
-        if (liked.indexOf(c) === -1) {
-          liked.push(c);
-          saveLiked(liked);
-          updateUI();
-        }
-      });
+    btn.addEventListener('click', function () {
+      localStorage.setItem(STORAGE_KEY, 'yes');
+      reveal();
     });
-
-    updateUI();
   })();
 </script>
 
