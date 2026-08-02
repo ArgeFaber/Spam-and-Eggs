@@ -108,6 +108,14 @@ h1, h2, h3 {
   padding: 40px 24px;
 }
 
+.site-logo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
 .torn-banner {
   display: inline-block;
   padding: 18px 44px 10px;
