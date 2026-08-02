@@ -192,51 +192,18 @@
     <p class="copyright">© 2026 Arge Barn. All rights reserved.</p>
   </div>
 </footer>
-<!-- Voice line: plays once on the visitor's first interaction, then never again -->
-
+<button id="voice-trigger" style="position:fixed; bottom:20px; right:20px; z-index:50; background:#c81d3a; color:#ede2ce; border:none; padding:12px 18px; border-radius:30px; font-family:'IBM Plex Mono',monospace; font-size:13px; cursor:pointer;">
+  🔊 Hear Spam
+</button>
 <audio id="voice-line" src="assets/audio/voice-line.mp3" preload="auto"></audio>
 
-
 <script>
-
-  (function () {
-
-    var played = false;
-
-    var voiceLine = document.getElementById('voice-line');
-
-
-    function playOnce() {
-
-      if (played) return;
-
-      played = true;
-
-      voiceLine.play().catch(function () {
-
-        // Autoplay was blocked — safe to ignore, it'll just wait for the next interaction
-
-        played = false;
-
-      });
-
-      document.removeEventListener('click', playOnce);
-
-      document.removeEventListener('scroll', playOnce);
-
-      document.removeEventListener('touchstart', playOnce);
-
-    }
-
-
-    document.addEventListener('click', playOnce);
-
-    document.addEventListener('scroll', playOnce);
-
-    document.addEventListener('touchstart', playOnce);
-
-  })();
-
+  var btn = document.getElementById('voice-trigger');
+  var voiceLine = document.getElementById('voice-line');
+  btn.addEventListener('click', function () {
+    voiceLine.play();
+    btn.style.display = 'none';
+  });
 </script>
 </body>
 </html>
