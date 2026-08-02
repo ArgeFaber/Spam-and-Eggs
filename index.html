@@ -9,12 +9,6 @@
 <meta property="og:description" content="Five breakfast items. One very serious morning. Nobody makes it to lunch.">
 <meta property="og:image" content="assets/images/cover.jpg">
 <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-
 </head>
 <body>
 
@@ -25,14 +19,14 @@
   </video>
   <div class="hero-content">
     <div class="torn-banner">
-     <h1>Spam and eggs</h1>
+      <h1>Spam<br>&amp; Eggs</h1>
     </div>
     <p class="hero-sub">A Very Serious Morning</p>
     <p class="hero-tagline">Five breakfast items. One very serious morning. Nobody makes it to lunch.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Listen on Spotify</a>
       <!-- TODO: paste your actual TuneIn show URL below in place of "#" -->
-      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Listen on TuneIn</a>
+      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Listen on TuneIn</a>
     </div>
   </div>
   <div class="scroll-cue">Scroll — if you dare</div>
@@ -80,37 +74,40 @@
     </div>
     <div class="cast-grid">
 
-      <div class="dossier">
+      <div class="dossier" data-char="spam">
         <div class="dossier-photo"><img src="assets/images/spam-plate.jpg" alt="Agent Spam"></div>
         <div class="dossier-body">
           <div class="dossier-name">Agent Spam</div>
           <div class="dossier-status">Status: Incognito</div>
           <p class="dossier-bio">Fostered in the Scottish Highlands by two well-meaning bottles of ketchup. Officially, nobody knows what he did before the tin.</p>
           <p class="dossier-quote">"A less salty mission, today."</p>
+          <button class="like-btn" data-char="spam">🤍 Like Agent Spam</button>
         </div>
       </div>
 
-      <div class="dossier">
+      <div class="dossier" data-char="eggs">
         <div class="dossier-photo"><img src="assets/images/eggs.jpg" alt="Private Eggs"></div>
         <div class="dossier-body">
           <div class="dossier-name">Private Eggs</div>
           <div class="dossier-status">Status: Active, technically</div>
           <p class="dossier-bio">Deeply confident. Insists he's free range. Has never once, to anyone's knowledge, left Yorkshire.</p>
           <p class="dossier-quote">"Eggs does not stress, mon ami."</p>
+          <button class="like-btn" data-char="eggs">🤍 Like Private Eggs</button>
         </div>
       </div>
 
-      <div class="dossier">
+      <div class="dossier" data-char="brownsauce">
         <div class="dossier-photo"><img src="assets/images/brownsauce.jpg" alt="Dr. Brown Sauce"></div>
         <div class="dossier-body">
           <div class="dossier-name">Dr. Brown Sauce</div>
           <div class="dossier-status">Status: Dead centre, always</div>
           <p class="dossier-bio">Thick and heavy — not at all like his cousin A1, a distant, should-be-forgotten diner regular.</p>
           <p class="dossier-quote">"That's my prerogative."</p>
+          <button class="like-btn" data-char="brownsauce">🤍 Like Dr. Brown Sauce</button>
         </div>
       </div>
 
-      <div class="dossier">
+      <div class="dossier" data-char="toast">
         <div class="dossier-photo">
           <div class="redacted-photo"><span class="redacted-stamp">Image Withheld</span></div>
         </div>
@@ -119,10 +116,11 @@
           <div class="dossier-status">Status: Local heavy</div>
           <p class="dossier-bio">Nobody has ever seen him arrive. He simply pre-exists each morning, same as taxes.</p>
           <p class="dossier-quote">"Oi oi, saveloy!"</p>
+          <button class="like-btn" data-char="toast">🤍 Like Toast</button>
         </div>
       </div>
 
-      <div class="dossier">
+      <div class="dossier" data-char="butter">
         <div class="dossier-photo">
           <div class="redacted-photo"><span class="redacted-stamp">Image Withheld</span></div>
         </div>
@@ -131,9 +129,56 @@
           <div class="dossier-status">Status: Overlooked</div>
           <p class="dossier-bio">Constantly left at the supermarket. Never once, in this kitchen or any kitchen, asked her opinion.</p>
           <p class="dossier-quote">"I'll show them."</p>
+          <button class="like-btn" data-char="butter">🤍 Like Miss Butter</button>
         </div>
       </div>
 
+    </div>
+
+    <!-- ============ BONUS FILES (unlockable) ============ -->
+    <div id="bonus-wrap">
+      <div class="bonus-lock" id="bonus-lock">
+        <p class="eyebrow">🔒 Classified</p>
+        <p class="bonus-progress" id="bonus-progress">Like all 5 characters above to unlock the Bonus Files.</p>
+      </div>
+
+      <div class="cast-grid bonus-grid" id="bonus-grid" hidden>
+        <div class="dossier">
+          <div class="dossier-photo">
+            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+          </div>
+          <div class="dossier-body">
+            <div class="dossier-name">A1</div>
+            <div class="dossier-status">Status: Distant, should-be-forgotten</div>
+            <p class="dossier-bio">Brown Sauce's cousin. Last heard doing steak-night specials at some roadside diner outside Nevada. Selling himself cheap.</p>
+            <p class="dossier-quote">"Another day, another dollar-less."</p>
+          </div>
+        </div>
+
+        <div class="dossier">
+          <div class="dossier-photo">
+            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+          </div>
+          <div class="dossier-body">
+            <div class="dossier-name">The Tomato Brothers</div>
+            <div class="dossier-status">Status: Unspecified, plural</div>
+            <p class="dossier-bio">Referenced once, feared thereafter. Whatever they did to Brown Sauce, he's still not over it.</p>
+            <p class="dossier-quote">"Do I look British?"</p>
+          </div>
+        </div>
+
+        <div class="dossier">
+          <div class="dossier-photo">
+            <div class="redacted-photo"><span class="redacted-stamp">Never Rendered</span></div>
+          </div>
+          <div class="dossier-body">
+            <div class="dossier-name">Margarine</div>
+            <div class="dossier-status">Status: Nemesis</div>
+            <p class="dossier-bio">Butter's rival, forever trying to bring her down. Not pure. Not welcome.</p>
+            <p class="dossier-quote">"Constantly left at the supermarket, and rightly so."</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -154,7 +199,7 @@
       <p class="small">Full audiobook — multi-voice, ~15 minutes</p>
       <div class="cta-row" style="margin-top:10px;">
         <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Full show on Spotify</a>
-        <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Full show on TuneIn</a>
+        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Full show on TuneIn</a>
       </div>
     </div>
   </div>
@@ -183,7 +228,7 @@
     <p class="eyebrow">Declassified</p>
     <div style="height:14px"></div>
     <p class="about-name">Arge Barn</p>
-    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years writing design columns for magazines back in England along with an ideas company — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
+    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years writing design columns for magazines back in England — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
     <p style="font-style:italic; color:var(--yolk-gold);">This is his first book. He regrets nothing.</p>
   </div>
 </section>
@@ -195,21 +240,71 @@
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Spotify</a>
       <a class="btn btn-outline" href="#" target="_blank" rel="noopener">TuneIn</a>
     </div>
+    <p class="disclosure">
+      The text of this book was developed with the assistance of AI tools and has
+      been substantially edited, revised, and finalized by the author. The
+      illustrations were generated using AI image-generation tools. Narration
+      produced with AI voices.
+    </p>
     <p class="copyright">© 2026 Arge Barn. All rights reserved.</p>
   </div>
 </footer>
-<button id="voice-trigger" style="position:fixed; bottom:20px; right:20px; z-index:50; background:#c81d3a; color:#ede2ce; border:none; padding:12px 18px; border-radius:30px; font-family:'IBM Plex Mono',monospace; font-size:13px; cursor:pointer;">
-  🔊 Hear Spam
-</button>
-<audio id="voice-line" src="assets/audio/voice-line.mp3" preload="auto"></audio>
 
+<!-- Bonus Files unlock logic -->
 <script>
-  var btn = document.getElementById('voice-trigger');
-  var voiceLine = document.getElementById('voice-line');
-  btn.addEventListener('click', function () {
-    voiceLine.play();
-    btn.style.display = 'none';
-  });
+  (function () {
+    var ALL_CHARS = ['spam', 'eggs', 'brownsauce', 'toast', 'butter'];
+    var STORAGE_KEY = 'spamAndEggsLikes';
+
+    function getLiked() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+      } catch (e) { return []; }
+    }
+
+    function saveLiked(arr) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    }
+
+    function updateUI() {
+      var liked = getLiked();
+
+      document.querySelectorAll('.like-btn').forEach(function (btn) {
+        var c = btn.getAttribute('data-char');
+        if (liked.indexOf(c) !== -1) {
+          btn.textContent = btn.textContent.replace('🤍', '❤️');
+          btn.classList.add('liked');
+          btn.disabled = true;
+        }
+      });
+
+      var progress = document.getElementById('bonus-progress');
+      var lock = document.getElementById('bonus-lock');
+      var grid = document.getElementById('bonus-grid');
+
+      if (liked.length >= ALL_CHARS.length) {
+        lock.hidden = true;
+        grid.hidden = false;
+      } else {
+        progress.textContent = 'Liked ' + liked.length + ' of ' + ALL_CHARS.length + ' — like everyone above to unlock the Bonus Files.';
+      }
+    }
+
+    document.querySelectorAll('.like-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var c = btn.getAttribute('data-char');
+        var liked = getLiked();
+        if (liked.indexOf(c) === -1) {
+          liked.push(c);
+          saveLiked(liked);
+          updateUI();
+        }
+      });
+    });
+
+    updateUI();
+  })();
 </script>
+
 </body>
 </html>
