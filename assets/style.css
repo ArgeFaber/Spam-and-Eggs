@@ -128,7 +128,7 @@ opacity: 45%;
 .torn-banner h1 {
   font-size: clamp(3.4rem, 11vw, 7.5rem);
   color: var(--yolk-gold);
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 2px #fff;
 }
 
 .hero-sub {
