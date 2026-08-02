@@ -25,8 +25,7 @@
     <source src="assets/video/hero-bond.mp4" type="video/mp4">
   </video>
   <script>
-    // Randomly pick one hero background clip per page load
-   (function () {
+ (function () {
   var clips = [
     'assets/video/hero-bond.mp4',
     'assets/video/hero-brownsauce.mp4',
@@ -37,15 +36,30 @@
   var pick = clips[Math.floor(Math.random() * clips.length)];
   var vid = document.getElementById('hero-video');
   
-  // FIX: Change the source on the video element directly, not the <source> tag
-  vid.src = pick; 
-  vid.load();
-  
-  // Optional: Force autoplay in case browser policies block it
-  vid.play().catch(function(error) {
-    console.log("Autoplay prevented, showing fallback image instead.", error);
-  });
+  if (vid) {
+    // 1. Force the element to be muted (Chrome absolute requirement)
+    vid.muted = true;
+    vid.defaultMuted = true;
+    
+    // 2. Clear any old sources entirely
+    vid.removeAttribute('src');
+    
+    // 3. Apply the new randomized video path
+    vid.src = pick;
+    
+    // 4. Force Chrome to reload the new file path
+    vid.load();
+    
+    // 5. Play using a promise to bypass the browser block
+    var playPromise = vid.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function(error) {
+        console.log("Chrome blocked autoplay: ", error);
+      });
+    }
+  }
 })();
+
   </script>
   <div class="hero-content">
     <div class="torn-banner">
