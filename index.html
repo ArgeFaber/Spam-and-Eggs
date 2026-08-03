@@ -210,14 +210,36 @@
           <p>Same kitchen, same dark logic, a different shift on the counter. Nothing's confirmed. Nothing's off the table.</p>
           <p class="submit-line">
             Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge —
-            <a href="mailto:YOUR_EMAIL_HERE@example.com?subject=Character%20submission%20for%20Spam%20and%20Eggs%20Book%20Two&body=My%20character%20idea%3A%0A%0A">send it in</a>.
-          </p>
+           <form id="character-form" class="character-form" action="https://formspree.io/f/xnjeekwq" method="POST">
+            <input type="text" name="name" placeholder="Your name (optional)" autocomplete="off">
+            <input type="email" name="email" placeholder="Your email (optional, only if you want a reply)" autocomplete="off">
+            <textarea name="idea" placeholder="Your character idea..." required rows="3"></textarea>
+
+            <!-- Honeypot: real visitors never see or fill this in; bots usually do.
+                 Formspree silently discards any submission where this isn't empty. -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <!-- Redirects back to this exact page with ?submitted=true, value set by JS below -->
+            <input type="hidden" name="_next" id="character-form-next">
+
+            <button type="submit" class="btn btn-outline">Send it in</button>
+          </form>
         </div>
+      </div>
+    </div>
+
+    <!-- Thank-you dialog, shown after a successful Formspree redirect back -->
+    <div id="thanks-overlay" class="thanks-overlay" hidden>
+      <div class="thanks-box">
+        <p class="eyebrow">Filed &amp; Noted</p>
+        <h3>Thanks for the idea</h3>
+        <p>It's in the pile with everything else that "probably isn't" true. Appreciated.</p>
+        <button class="btn btn-primary" id="thanks-close">Close</button>
       </div>
     </div>
   </div>
 </section>
-
+  
 <!-- ============ LISTEN ============ -->
 <section id="listen">
   <div class="wrap">
