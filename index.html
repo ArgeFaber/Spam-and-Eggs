@@ -24,18 +24,21 @@
   <video autoplay muted loop playsinline poster="assets/images/cover.jpg" id="hero-video">
     <source src="assets/video/hero-bond.mp4" type="video/mp4">
   </video>
-  <script>
-    // Randomly pick one hero background clip per page load
+ <script>
+    // Each hero clip paired with its matching voice line.
+    // Add a real audioSrc for the others as you get clips recorded —
+    // until then they fall back to the default voice-line.mp3.
+    var HERO_CLIPS = [
+      { video: 'assets/video/hero-bond.mp4',              audio: 'assets/audio/voice-line.mp3' },
+      { video: 'assets/video/hero-brownsauce.mp4',         audio: 'assets/audio/voice-line2.mp3' },
+      { video: 'assets/video/hero-spam-streetfighter.mp4', audio: 'assets/audio/voice-line3.mp3' },
+      { video: 'assets/video/hero-toast-crazy.mp4',        audio: 'assets/audio/voice-line4.mp3' }
+    ];
+    var CURRENT_HERO = HERO_CLIPS[Math.floor(Math.random() * HERO_CLIPS.length)];
+
     (function () {
-      var clips = [
-        'assets/video/hero-bond.mp4',
-        'assets/video/hero-brownsauce.mp4',
-        'assets/video/hero-spam-streetfighter.mp4',
-        'assets/video/hero-toast-crazy.mp4'
-      ];
-      var pick = clips[Math.floor(Math.random() * clips.length)];
       var vid = document.getElementById('hero-video');
-      vid.querySelector('source').src = pick;
+      vid.querySelector('source').src = CURRENT_HERO.video;
       vid.load();
     })();
   </script>
@@ -269,7 +272,7 @@
   <div class="wrap">
     <div class="btn-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Spotify</a>
-      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">TuneIn</a>
+      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">TuneIn</a>
     </div>
     
     <p class="sponsor-line">Spam and Eggs is proudly sponsored by <a href="https://argefaber.github.io/Lanthanides-THULIUM/" target="_blank" rel="noopener">Lanthanides (THULIUM)</a></p>
