@@ -322,5 +322,33 @@
   })();
 </script>
 
+<!-- Character submission form: set redirect target, show thank-you modal on return -->
+<script>
+  (function () {
+    // Point Formspree's redirect back at this exact page, flagged with ?submitted=true
+    var baseUrl = window.location.href.split('?')[0].split('#')[0];
+    document.getElementById('character-form-next').value = baseUrl + '?submitted=true#bonus-wrap';
+
+    // If we've just come back from a successful submission, show the thank-you dialog
+    var params = new URLSearchParams(window.location.search);
+    var overlay = document.getElementById('thanks-overlay');
+    var closeBtn = document.getElementById('thanks-close');
+
+    if (params.get('submitted') === 'true') {
+      overlay.hidden = false;
+      // Clean the URL so refreshing/sharing doesn't re-trigger the dialog
+      var cleanUrl = baseUrl + window.location.hash;
+      window.history.replaceState({}, '', cleanUrl);
+    }
+
+    closeBtn.addEventListener('click', function () {
+      overlay.hidden = true;
+    });
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) overlay.hidden = true;
+    });
+  })();
+</script>
+
 </body>
 </html>
