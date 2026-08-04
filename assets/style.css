@@ -441,11 +441,14 @@ section {
   position: fixed;
   inset: 0;
   background: rgba(5,5,5,0.82);
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
   padding: 20px;
+}
+
+.thanks-overlay:not([hidden]) {
+  display: flex;
 }
 
 .thanks-box {
@@ -472,6 +475,7 @@ section {
   font-size: 1rem;
   margin-bottom: 22px;
 }
+
 
 /* ---------------- LISTEN ---------------- */
 
