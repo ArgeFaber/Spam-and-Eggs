@@ -110,6 +110,8 @@ h1, h2, h3 {
 
 .torn-banner {
   display: inline-block;
+  background: var(--redacted);
+  border: 3px solid var(--yolk-gold);
   padding: 18px 44px 10px;
   transform: rotate(-1.2deg);
   clip-path: polygon(1% 8%, 6% 0%, 22% 4%, 40% 0%, 58% 3%, 76% 0%, 93% 5%, 99% 0%,
@@ -441,11 +443,14 @@ section {
   position: fixed;
   inset: 0;
   background: rgba(5,5,5,0.82);
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
   padding: 20px;
+}
+
+.thanks-overlay:not([hidden]) {
+  display: flex;
 }
 
 .thanks-box {
