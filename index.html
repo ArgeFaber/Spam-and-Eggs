@@ -9,13 +9,6 @@
 <meta property="og:description" content="Five breakfast items. One very serious morning. Nobody makes it to lunch.">
 <meta property="og:image" content="assets/images/cover.jpg">
 <link rel="stylesheet" href="assets/style.css">
-  
-<link rel="icon" href="assets/images/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-512x512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 </head>
 <body>
 
@@ -24,16 +17,15 @@
   <video autoplay muted loop playsinline poster="assets/images/cover.jpg" id="hero-video">
     <source src="assets/video/hero-bond.mp4" type="video/mp4">
   </video>
- <script>
+  <script>
     // Each hero clip paired with its matching voice line.
     // Add a real audioSrc for the others as you get clips recorded —
     // until then they fall back to the default voice-line.mp3.
     var HERO_CLIPS = [
       { video: 'assets/video/hero-bond.mp4',              audio: 'assets/audio/voice-line.mp3' },
-      { video: 'assets/video/hero-brownsauce.mp4',         audio: 'assets/audio/voice-line2.mp3' },
-      { video: 'assets/video/hero-spam-streetfighter.mp4', audio: 'assets/audio/voice-line3.mp3' },
-      { video: 'assets/video/hero-toast-crazy.mp4',        audio: 'assets/audio/voice-line4.mp3' },
-      { video: 'assets/video/hero-butter-angry.mp4',        audio: 'assets/audio/voice-line5.mp3' }
+      { video: 'assets/video/hero-brownsauce.mp4',         audio: 'assets/audio/voice-line.mp3' },
+      { video: 'assets/video/hero-spam-streetfighter.mp4', audio: 'assets/audio/voice-line.mp3' },
+      { video: 'assets/video/hero-toast-crazy.mp4',        audio: 'assets/audio/voice-line.mp3' }
     ];
     var CURRENT_HERO = HERO_CLIPS[Math.floor(Math.random() * HERO_CLIPS.length)];
 
@@ -45,14 +37,14 @@
   </script>
   <div class="hero-content">
     <div class="torn-banner">
-      <h1>Spam<br>and Eggs</h1>
+      <h1>Spam<br>&amp; Eggs</h1>
     </div>
-    <p class="hero-sub">A Very Serious Morning...</p>
+    <p class="hero-sub">A Very Serious Morning</p>
     <p class="hero-tagline">Five breakfast items. One very serious morning. Nobody makes it to lunch.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Listen on Spotify</a>
       <!-- TODO: paste your actual TuneIn show URL below in place of "#" -->
-      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Listen on TuneIn</a>
+      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Listen on TuneIn</a>
     </div>
   </div>
   <div class="scroll-cue">Scroll — if you dare</div>
@@ -208,9 +200,9 @@
           <p class="eyebrow">In Development</p>
           <h3>Book Two</h3>
           <p>Same kitchen, same dark logic, a different shift on the counter. Nothing's confirmed. Nothing's off the table.</p>
-          <p class="submit-line">
-            Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge —
-           <form id="character-form" class="character-form" action="https://formspree.io/f/xnjeekwq" method="POST">
+          <p class="submit-line">Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge — send it in.</p>
+
+          <form id="character-form" class="character-form" action="https://formspree.io/f/xnjeekwq" method="POST">
             <input type="text" name="name" placeholder="Your name (optional)" autocomplete="off">
             <input type="email" name="email" placeholder="Your email (optional, only if you want a reply)" autocomplete="off">
             <textarea name="idea" placeholder="Your character idea..." required rows="3"></textarea>
@@ -239,7 +231,7 @@
     </div>
   </div>
 </section>
-  
+
 <!-- ============ LISTEN ============ -->
 <section id="listen">
   <div class="wrap">
@@ -256,7 +248,7 @@
       <p class="small">Full audiobook — multi-voice, ~15 minutes</p>
       <div class="cta-row" style="margin-top:10px;">
         <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Full show on Spotify</a>
-        <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Full show on TuneIn</a>
+        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Full show on TuneIn</a>
       </div>
     </div>
   </div>
@@ -285,7 +277,7 @@
     <p class="eyebrow">Declassified</p>
     <div style="height:14px"></div>
     <p class="about-name">Arge Barn</p>
-    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years running his own design & ideas company whilst writing a few design columns for magazines back in England — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
+    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years writing design columns for magazines back in England — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
     <p style="font-style:italic; color:var(--yolk-gold);">This is his first book. He regrets nothing.</p>
   </div>
 </section>
@@ -295,15 +287,19 @@
   <div class="wrap">
     <div class="btn-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Spotify</a>
-      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">TuneIn</a>
+      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">TuneIn</a>
     </div>
-    
+    <p class="disclosure">
+      The text of this book was developed with the assistance of AI tools and has
+      been substantially edited, revised, and finalized by the author. The
+      illustrations were generated using AI image-generation tools. Narration
+      produced with AI voices.
+    </p>
     <p class="sponsor-line">Spam and Eggs is proudly sponsored by <a href="https://argefaber.github.io/Lanthanides-THULIUM/" target="_blank" rel="noopener">Lanthanides (THULIUM)</a></p>
     <p class="copyright">© 2026 Arge Barn. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Voice line: click to hear Spam -->
 <!-- Voice line: click to hear whichever character's hero video is playing -->
 <button id="voice-trigger" aria-label="Play a voice line">🔊 Hear them</button>
 <audio id="voice-line" preload="auto"></audio>
