@@ -23,9 +23,10 @@
     // until then they fall back to the default voice-line.mp3.
     var HERO_CLIPS = [
       { video: 'assets/video/hero-bond.mp4',              audio: 'assets/audio/voice-line.mp3' },
-      { video: 'assets/video/hero-brownsauce.mp4',         audio: 'assets/audio/voice-line.mp3' },
-      { video: 'assets/video/hero-spam-streetfighter.mp4', audio: 'assets/audio/voice-line.mp3' },
-      { video: 'assets/video/hero-toast-crazy.mp4',        audio: 'assets/audio/voice-line.mp3' }
+      { video: 'assets/video/hero-brownsauce.mp4',         audio: 'assets/audio/voice-line2.mp3' },
+      { video: 'assets/video/hero-spam-streetfighter.mp4', audio: 'assets/audio/voice-line3.mp3' },
+      { video: 'assets/video/hero-toast-crazy.mp4',        audio: 'assets/audio/voice-line4.mp3' },
+      { video: 'assets/video/hero-butter-angry.mp4',        audio: 'assets/audio/voice-line5.mp3' }
     ];
     var CURRENT_HERO = HERO_CLIPS[Math.floor(Math.random() * HERO_CLIPS.length)];
 
@@ -44,7 +45,7 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Listen on Spotify</a>
       <!-- TODO: paste your actual TuneIn show URL below in place of "#" -->
-      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Listen on TuneIn</a>
+      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Listen on TuneIn</a>
     </div>
   </div>
   <div class="scroll-cue">Scroll — if you dare</div>
@@ -200,33 +201,11 @@
           <p class="eyebrow">In Development</p>
           <h3>Book Two</h3>
           <p>Same kitchen, same dark logic, a different shift on the counter. Nothing's confirmed. Nothing's off the table.</p>
-          <p class="submit-line">Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge — send it in.</p>
-
-          <form id="character-form" class="character-form" action="https://formspree.io/f/xnjeekwq" method="POST">
-            <input type="text" name="name" placeholder="Your name (optional)" autocomplete="off">
-            <input type="email" name="email" placeholder="Your email (optional, only if you want a reply)" autocomplete="off">
-            <textarea name="idea" placeholder="Your character idea..." required rows="3"></textarea>
-
-            <!-- Honeypot: real visitors never see or fill this in; bots usually do.
-                 Formspree silently discards any submission where this isn't empty. -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-            <!-- Redirects back to this exact page with ?submitted=true, value set by JS below -->
-            <input type="hidden" name="_next" id="character-form-next">
-
-            <button type="submit" class="btn btn-outline">Send it in</button>
-          </form>
+          <p class="submit-line">
+            Got a character idea? A cursed condiment, a doomed leftover, a fridge-door regular with a grudge —
+            <a href="mailto:YOUR_EMAIL_HERE@example.com?subject=Character%20submission%20for%20Spam%20and%20Eggs%20Book%20Two&body=My%20character%20idea%3A%0A%0A">send it in</a>.
+          </p>
         </div>
-      </div>
-    </div>
-
-    <!-- Thank-you dialog, shown after a successful Formspree redirect back -->
-    <div id="thanks-overlay" class="thanks-overlay" hidden>
-      <div class="thanks-box">
-        <p class="eyebrow">Filed &amp; Noted</p>
-        <h3>Thanks for the idea</h3>
-        <p>It's in the pile with everything else that "probably isn't" true. Appreciated.</p>
-        <button class="btn btn-primary" id="thanks-close">Close</button>
       </div>
     </div>
   </div>
@@ -248,7 +227,7 @@
       <p class="small">Full audiobook — multi-voice, ~15 minutes</p>
       <div class="cta-row" style="margin-top:10px;">
         <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Full show on Spotify</a>
-        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Full show on TuneIn</a>
+        <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">Full show on TuneIn</a>
       </div>
     </div>
   </div>
@@ -277,7 +256,7 @@
     <p class="eyebrow">Declassified</p>
     <div style="height:14px"></div>
     <p class="about-name">Arge Barn</p>
-    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years writing design columns for magazines back in England — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
+    <p>Arge Barn is a first-time author who insists this book is a true story. It isn't. He spent years running his own design & ideas company whilst writing a few design columns for magazines back in England — which explains a lot, and nothing. He lives somewhere between the Highlands and the East End, which may explain a few things about his narrator and the Shady-loo way.</p>
     <p style="font-style:italic; color:var(--yolk-gold);">This is his first book. He regrets nothing.</p>
   </div>
 </section>
@@ -287,14 +266,8 @@
   <div class="wrap">
     <div class="btn-row">
       <a class="btn btn-primary" href="https://open.spotify.com/show/67nCnRK3Gd2xtgFxg7SGTk" target="_blank" rel="noopener">Spotify</a>
-      <a class="btn btn-outline" href="#" target="_blank" rel="noopener">TuneIn</a>
+      <a class="btn btn-outline" href="http://tun.in/pyklT" target="_blank" rel="noopener">TuneIn</a>
     </div>
-    <p class="disclosure">
-      The text of this book was developed with the assistance of AI tools and has
-      been substantially edited, revised, and finalized by the author. The
-      illustrations were generated using AI image-generation tools. Narration
-      produced with AI voices.
-    </p>
     <p class="sponsor-line">Spam and Eggs is proudly sponsored by <a href="https://argefaber.github.io/Lanthanides-THULIUM/" target="_blank" rel="noopener">Lanthanides (THULIUM)</a></p>
     <p class="copyright">© 2026 Arge Barn. All rights reserved.</p>
   </div>
@@ -336,34 +309,6 @@
     btn.addEventListener('click', function () {
       localStorage.setItem(STORAGE_KEY, 'yes');
       reveal();
-    });
-  })();
-</script>
-
-<!-- Character submission form: set redirect target, show thank-you modal on return -->
-<script>
-  (function () {
-    // Point Formspree's redirect back at this exact page, flagged with ?submitted=true
-    var baseUrl = window.location.href.split('?')[0].split('#')[0];
-    document.getElementById('character-form-next').value = baseUrl + '?submitted=true#bonus-wrap';
-
-    // If we've just come back from a successful submission, show the thank-you dialog
-    var params = new URLSearchParams(window.location.search);
-    var overlay = document.getElementById('thanks-overlay');
-    var closeBtn = document.getElementById('thanks-close');
-
-    if (params.get('submitted') === 'true') {
-      overlay.hidden = false;
-      // Clean the URL so refreshing/sharing doesn't re-trigger the dialog
-      var cleanUrl = baseUrl + window.location.hash;
-      window.history.replaceState({}, '', cleanUrl);
-    }
-
-    closeBtn.addEventListener('click', function () {
-      overlay.hidden = true;
-    });
-    overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) overlay.hidden = true;
     });
   })();
 </script>
